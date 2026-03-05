@@ -15,13 +15,7 @@ connectCloudinary()
 
 // middleware
 app.use(express.json())
-app.use(cors({
-  origin: [
-    "https://doctor-appointment-app-seven-ivory.vercel.app/",
-    "https://doctor-appointment-app-5rpx.vercel.app/"
-  ],
-  credentials: true
-}))
+app.use(cors({ origin: "*" }))
 
 // api endpoints
 app.use('/api/admin', adminRouter)
